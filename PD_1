@@ -1,0 +1,74 @@
+# z1
+# a = 2
+# b = 3
+# print(b, a)
+
+# z2
+# print("podaj liczby: ")
+# a = int(input("Liczba 1: "))
+# b = int(input("Liczba 2: "))
+# co = 0
+# while co < 1 or co > 4:
+#     co = int(input("Co chcesz zrobić?\n1.Dodać\n2.Odjąć\n3.Pomnożyć\n4.Podzielić\n"))
+#     if co == 1:
+#         print(a + b)
+#     elif co == 2:
+#         print(a - b)
+#     elif co == 3:
+#         print(a * b)
+#     elif co == 4:
+#         print(a/b)
+#     else:
+#         print("Brak opcji")
+
+# z3
+# a = 2
+# b = 3
+# a += b
+# print(a)
+# a = 2
+# a -= b
+# print(a)
+# a = 2
+# a *= b
+# print(a)
+# a = 2
+# a /= b
+# print(a)
+# a = 2
+# a **= b
+# print(a)
+# a = 2
+# a %= b
+# print(a)
+
+from math import *
+
+# z4
+# print(exp(10))
+# print(pow(log(5+sin(8)**2), 1.0/6.0))
+# print(fmod(3, 55))
+# print(comb(4, 80))
+
+# z5
+# imie = "ŁUKASZ"
+# nazwisko = "KAŁAMARSKI"
+# print(imie.capitalize())
+# print(nazwisko.capitalize())
+
+# z6
+p = 'o la la la la'
+# print(p.count('la'))
+
+# z7
+# tekst = 'lamy'
+# print(tekst[1], tekst[len(tekst)-1])
+
+# z8
+# print(p.split(' '))
+
+# z9
+# s = 'lama'
+# f = 2.34
+# h = hex(3)
+# print(s, f, h)
