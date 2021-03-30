@@ -1,0 +1,203 @@
+# z1
+# class Material:
+#
+#     def __init__(self, rodzaj, dlugosc, szerokosc):
+#         self.rodzaj = rodzaj
+#         self.dlugosc = dlugosc
+#         self.szerokosc = szerokosc
+#
+#     def wyswietl_nazwe(self):
+#         print(self.rodzaj + " o długości " + self.dlugosc + " i o szerokości" + self.szerokosc)
+#
+# class Ubrania(Material):
+#
+#     def __init__(self, rozmiar, kolor, dla_kogo):
+#         self.rozmiar = rozmiar
+#         self.kolor = kolor
+#         self.dla_kogo = dla_kogo
+#
+#     def wyswietl_dane(self):
+#         print(self.rozmiar + " rozmiar, koloru " + self.kolor + " dla " + self.dla_kogo)
+#
+# class Sweter(Ubrania):
+#
+#     def __init__(self, rodzaj_swetra):
+#         self.rodzaj_swetra = rodzaj_swetra
+#
+#     def wyswietl_dane2(self):
+#         print(self.rodzaj_swetra)
+#
+#
+# sw = Sweter("rozpinany")
+# sw.kolor = "rozowy"
+# sw.rozmiar = "L"
+# sw.dla_kogo = "teściowej"
+# sw.rodzaj = "dziergany"
+# sw.wyswietl_dane2()
+# sw.wyswietl_dane()
+# print(sw.rodzaj)
+
+# z2
+# class Kwadrat:
+#
+#     def __init__(self, x):
+#         self.x = x
+#
+#     def __add__(self):
+#         suma = self.x * 5
+#         return suma
+#
+# kw = Kwadrat(2)
+# print(kw.__add__())
+
+# z3
+# class Kwadrat:
+#
+#     def __init__(self, x):
+#         self.x = x
+#
+#     def __ge__(self, o):
+#         return self.x >= o
+#
+#     def __gt__(self, o):
+#         return self.x > o
+#
+#     def __lt__(self, o):
+#         return self.x < o
+#
+#     def __le__(self, o):
+#         return self.x <= o
+#
+# kw = Kwadrat(2)
+# print(kw.__gt__(4))
+# print(kw.__ge__(4))
+# print(kw.__lt__(4))
+# print(kw.__le__(4))
+
+# z4
+# class Point:
+#     counter = []
+#
+#     def __init__(self, x = 0, y = 0):
+#         self.x = x
+#         self.y = y
+#
+#     def __ge__(self, o):
+#         if(o >= self.x + self.y):
+#             self.counter.append(o)
+#
+# p = Point()
+# p.__ge__(2)
+# p1 = Point(2, 4)
+# p1.__ge__(9)
+# p2 = Point(1, 4)
+# p2.__ge__(3)
+# print(p.counter)
+
+# z5
+# class Osoba:
+#
+#     def __init__(self, imie, nazwisko):
+#         self.imie = imie
+#         self.nazwisko = nazwisko
+#
+#     def przedstaw_sieO(self):
+#         return "{} {}".format(self.imie, self.nazwisko)
+#
+# class Pracownik(Osoba):
+#
+#     def __init__(self, pensja):
+#         self.pensja = pensja
+#
+#     def przedstaw_sieP(self):
+#         return "{} {} i zarabiam {}".format(self.imiem, self.nazwisko, self.pensja)
+#
+# class Menadzer(Pracownik):
+#
+#     def przedstaw_sie(self):
+#         return  "{} {}, jestem menadżerem i zarabiam {}".format(self.imie, self.nazwisko, self.pensja)
+#
+# Janusz = Menadzer(2000)
+# Brajan = Pracownik(2000)
+# print(isinstance(Janusz, Pracownik))
+# print(isinstance(Brajan, Menadzer))
+# print(issubclass(Menadzer, Pracownik))
+# print(issubclass(Pracownik, Menadzer))
+
+# z7
+# class Parzysty:
+#
+#     def __init__(self, dane):
+#         self.dane = dane
+#         self.index = -1
+#         self.par = 1
+#
+#     def __iter__(self):
+#         return self
+#
+#     def __next__(self):
+#         if self.index == len(self.dane):
+#             raise StopIteration
+#         self.index = self.index + 1
+#         if (self.par == 1):
+#             self.par = 0
+#             return self.dane[self.index]
+#         else:
+#             self.par = 1
+#             return(" ")
+#
+# slowo = Parzysty("Alamakota")
+# for x in slowo.dane:
+#     print(slowo.__next__())
+
+# z8
+# class Sam:
+#
+#     def __init__(self, dane):
+#         self.dane = dane
+#         self.index = -1
+#
+#     def __iter__(self):
+#         return self
+#
+#     def __next__(self):
+#         if self.index == len(self.dane):
+#             raise StopIteration
+#         self.index = self.index + 1
+#         if self.dane[self.index] == "a" or self.dane[self.index] == "e" or self.dane[self.index] == "i" or self.dane[self.index] == "o" or self.dane[self.index] == "u" or self.dane[self.index] == "y":
+#             return self.dane[self.index]
+#         else:
+#             return(" ")
+#
+# slowo = Sam("brzoza")
+# for x in slowo.dane:
+#     print(slowo.__next__())
+
+# z9
+# def generator(dane):
+#     for x in range(len(dane)):
+#         if x%2 == 0:
+#             yield dane[x]
+#         else:
+#             yield " "
+#
+#
+#
+# slowo = "Alamakota"
+# gen = generator(slowo)
+# for x in range(len(slowo)):
+#     print(next(gen))
+
+
+# # z10
+# def foo(x0, r):
+#     x = 1
+#     while(1):
+#         yield x0 + r * x
+#         x = x + 1
+#
+# gen = foo(1, 3)
+# print(next(gen))
+# print(next(gen))
+# print(next(gen))
+# print(next(gen))
