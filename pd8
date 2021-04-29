@@ -1,0 +1,28 @@
+xlsx = pd.ExcelFile('imiona.xlsx')
+df = pd.read_excel(xlsx, header=0)
+
+df2 = pd.read_csv('zamowienia.csv', header=0, sep=';', decimal='.')
+
+# z1
+# w1 = df.groupby(['Rok']).agg({'Liczba': ['sum']})
+# w = w1.plot()
+# w.set_ylabel('Liczba ludności')
+# plt.show()
+
+# # z2
+# w1 = df.groupby(['Plec']).agg({'Liczba': ['sum']})
+# w = w1.plot.bar()
+# w.set_ylabel('Liczba ludności')
+# plt.yticks(rotation=0)
+# plt.xticks(rotation=0)
+# plt.show()
+
+# z3
+# w1 = df[df['Rok'] >= 2012].groupby(['Plec']).agg({'Liczba': ['sum']})
+# w = w1.plot.pie(subplots=True, autopct='%.2f %%')
+# plt.show()
+
+# z4
+# w2 = df2.groupby(['Sprzedawca']).agg({'Sprzedawca': ['size']})
+# w = w2.plot.bar()
+# plt.show()
